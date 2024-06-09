@@ -11,6 +11,8 @@ import { PageAbout } from "./common/pages/PageAbout.tsx";
 import { Page404 } from "./common/pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
 import { PageTechBooks } from "./common/pages/PageTechBooks.tsx";
+import { store } from "./app/store.ts";
+import { Provider } from "react-redux";
 
 const children = [
 	{
@@ -41,7 +43,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<AppProvider>
-		<RouterProvider router={router} />
-	</AppProvider>
+	<Provider store={store}>
+		<AppProvider>
+			<RouterProvider router={router} />
+		</AppProvider>
+	</Provider>
 );
