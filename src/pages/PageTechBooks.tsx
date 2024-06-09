@@ -19,7 +19,7 @@ export const PageTechBooks = () => {
 					</section>
 				</>
 			) : (
-				<div>loading...</div>
+				<div>Loading...</div>
 			)}
 		</>
 	);
