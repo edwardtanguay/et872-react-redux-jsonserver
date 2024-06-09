@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { IAppData, initialAppData } from "./shared/interfaces";
+import { IAppData, initialAppData } from "./shared/types";
 import axios from "axios";
 
 interface IAppContext {
