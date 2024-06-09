@@ -1,9 +1,11 @@
-import { useContext } from "react";
-import { AppContext } from "../../AppContext";
+import { useSelector } from "react-redux";
+import { RootState } from "../../app/store";
 import { SingleTechBook } from "../components/SingleTechbook";
 
 export const PageTechBooks = () => {
-	const { techBooks } = useContext(AppContext);
+	const selectCart = (state: RootState) => state.cart;
+	const { techBooks } = useSelector(selectCart);
+
 	return (
 		<>
 			{techBooks.length > 0 ? (
