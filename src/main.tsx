@@ -6,11 +6,11 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import "./app/index.scss";
-import { PageWelcome } from "./pages/PageWelcome.tsx";
-import { PageAbout } from "./pages/PageAbout.tsx";
-import { Page404 } from "./pages/Page404.tsx";
+import { PageWelcome } from "./common/pages/PageWelcome.tsx";
+import { PageAbout } from "./common/pages/PageAbout.tsx";
+import { Page404 } from "./common/pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
-import { PageTechBooks } from "./pages/PageTechBooks.tsx";
+import { PageTechBooks } from "./common/pages/PageTechBooks.tsx";
 
 const children = [
 	{
@@ -19,7 +19,7 @@ const children = [
 	},
 	{
 		path: "techbooks",
-		element: <PageTechBooks/>
+		element: <PageTechBooks />,
 	},
 	{
 		path: "about",

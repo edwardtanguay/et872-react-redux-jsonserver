@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { AppContext } from "../AppContext";
-import { SingleTechBook } from "../common/components/SingleTechbook";
+import { AppContext } from "../../AppContext";
+import { SingleTechBook } from "../components/SingleTechbook";
 
 export const PageTechBooks = () => {
 	const { techBooks } = useContext(AppContext);
@@ -14,7 +14,12 @@ export const PageTechBooks = () => {
 
 					<section className="flex flex-wrap gap-3">
 						{techBooks.map((techBook) => {
-							return <SingleTechBook techBook={techBook} key={techBook.id} />;
+							return (
+								<SingleTechBook
+									techBook={techBook}
+									key={techBook.id}
+								/>
+							);
 						})}
 					</section>
 				</>
