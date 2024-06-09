@@ -5,7 +5,7 @@ import {
 	Navigate,
 	RouterProvider,
 } from "react-router-dom";
-import "./index.scss";
+import "./app/index.scss";
 import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
