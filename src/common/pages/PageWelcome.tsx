@@ -13,13 +13,13 @@ export const PageWelcome = () => {
 
 	return (
 		<>
-			<p>
-				Welcome to the book shop, current mode is {appData.siteEnvironment}.
+			<p className="text-xl mb-3">
+				Welcome to the Redux Book Shop, current mode is {appData.siteEnvironment}.
 			</p>
-			<div>
+			<div className="flex gap-3">
 				<button onClick={() => dispatch(subtract())}>Subtract</button>
 				<button onClick={() => dispatch(add())}>Add</button>
-				<div>count = {count}</div>
+				<p className="text-xl">count = {count}</p>
 			</div>
 		</>
 	);
