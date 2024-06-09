@@ -41,9 +41,6 @@ export const PageWelcome = () => {
 
 	return (
 		<>
-			<p>
-				Site is running in <b>{appData.siteEnvironment}</b> mode.
-			</p>
 			<h2 className="text-xl mt-3">
 				Flashcards{" "}
 				<button
