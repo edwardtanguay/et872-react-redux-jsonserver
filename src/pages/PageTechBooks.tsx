@@ -6,6 +6,12 @@ export const PageTechBooks = () => {
 	return (
 		<>
 			<p>There are {techBooks.length} tech books.</p>
+
+			{techBooks.map(techBook => {
+				return (
+					<div key={techBook.id}>{techBook.title}</div>
+				)
+			})}
 		</>
 	);
 };
