@@ -1,20 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	count: 0
-}
+	rating: 5,
+};
 
 export const cartSlice = createSlice({
-	name: 'cart',
+	name: "cart",
 	initialState,
 	reducers: {
 		subtract: (state) => {
-			state.count--;
+			state.rating--;
 		},
 		add: (state) => {
-			state.count++;
-		}
-	}
+			state.rating++;
+		},
+	},
 });
 
 export const { subtract, add } = cartSlice.actions;
