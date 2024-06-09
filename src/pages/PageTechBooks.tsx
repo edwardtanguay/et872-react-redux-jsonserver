@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
+import { SingleTechBook } from "../components/SingleTechbook";
 
 export const PageTechBooks = () => {
 	const { techBooks } = useContext(AppContext);
@@ -9,7 +10,7 @@ export const PageTechBooks = () => {
 
 			{techBooks.map(techBook => {
 				return (
-					<div key={techBook.id}>{techBook.title}</div>
+					<SingleTechBook/>
 				)
 			})}
 		</>
