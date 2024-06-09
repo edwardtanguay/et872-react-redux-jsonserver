@@ -6,7 +6,7 @@ export const PageTechBooks = () => {
 	const { techBooks } = useContext(AppContext);
 	return (
 		<>
-			<p>There are {techBooks.length} tech books.</p>
+			<p className="mb-3 text-xl">There are {techBooks.length} tech books.</p>
 
 			{techBooks.map(techBook => {
 				return (
