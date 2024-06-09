@@ -12,6 +12,7 @@ interface IAppProvider {
 	children: React.ReactNode;
 }
 
+const jsonServerUrl = "http://localhost:4205";
 const backendUrl = "http://localhost:4206";
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
@@ -26,8 +27,15 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		setAppData(_appData);
 	};
 
+	const loadTechBooks = async () => {
+		const response = await axios.get(`${jsonServerUrl}/techbooks`);
+		const _techBooks = response.data;
+		setTechBooks(_techBooks);
+	};
+
 	useEffect(() => {
 		loadAppData();
+		loadTechBooks();
 	}, []);
 
 	return (
