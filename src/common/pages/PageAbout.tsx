@@ -1,6 +1,11 @@
+import { RootState } from "../../app/store";
+import { useSelector } from "react-redux"
+
 export const PageAbout = () => {
+	const selectCart = (state: RootState) => state.cart;
+	const { rating } = useSelector(selectCart);
 
 	return (
-		<p>This is the about page.</p>
+		<p>This site is currently rated {rating} of 10.</p>
 	)
 }

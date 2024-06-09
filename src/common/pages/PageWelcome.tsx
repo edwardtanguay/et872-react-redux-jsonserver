@@ -9,7 +9,7 @@ export const PageWelcome = () => {
 	const { appData } = useContext(AppContext);
 	const dispatch = useDispatch();
 	const selectCart = (state: RootState) => state.cart;
-	const { rating: count } = useSelector(selectCart);
+	const { rating } = useSelector(selectCart);
 
 	return (
 		<>
@@ -35,7 +35,7 @@ export const PageWelcome = () => {
 						>
 							+
 						</button>
-						<p className="ml-2 text-2xl">{count}</p>
+						<p className="ml-2 text-2xl">{rating}</p>
 					</section>
 				</div>
 			</section>
