@@ -10,7 +10,7 @@ import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
-import { PageInfo } from "./pages/PageInfo.tsx";
+import { PageTechBooks } from "./pages/PageTechBooks.tsx";
 
 const children = [
 	{
@@ -18,8 +18,8 @@ const children = [
 		element: <PageWelcome />,
 	},
 	{
-		path: "info",
-		element: <PageInfo />,
+		path: "techbooks",
+		element: <PageTechBooks/>
 	},
 	{
 		path: "about",
