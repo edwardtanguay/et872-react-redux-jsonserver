@@ -1,8 +1,13 @@
-export const SingleTechBook = () => {
+import { TechBook } from "../shared/types";
+
+interface IProps {
+	techBook: TechBook;
+}
+
+export const SingleTechBook = ({ techBook }: IProps) => {
 	return (
 		<>
-			{/* <div key={techBook.id}>{techBook.title}</div> */}
-			<p>tech book</p>
+			<div key={techBook.id}>{techBook.title}</div>
 		</>
 	);
 };

@@ -10,7 +10,7 @@ export const PageTechBooks = () => {
 
 			{techBooks.map(techBook => {
 				return (
-					<SingleTechBook/>
+					<SingleTechBook techBook={techBook} />
 				)
 			})}
 		</>
