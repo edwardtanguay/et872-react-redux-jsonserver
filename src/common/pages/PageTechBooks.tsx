@@ -4,7 +4,7 @@ import { SingleTechBook } from "../components/SingleTechbook";
 
 export const PageTechBooks = () => {
 	const selectCart = (state: RootState) => state.cart;
-	const { techBooks } = useSelector(selectCart);
+	const { techBooks, cartItems } = useSelector(selectCart);
 
 	return (
 		<>
@@ -24,6 +24,7 @@ export const PageTechBooks = () => {
 							);
 						})}
 					</section>
+					<p className={cartItems.length > 0 ? 'text-yellow-200 font-semibold' : 'text-gray-400 italic'}>The are {cartItems.length} items the cart.</p>
 				</>
 			) : (
 				<div>Loading...</div>

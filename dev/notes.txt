@@ -3,3 +3,6 @@
 	- enable to click and put in cart which shows on second page
 - load actual books from API with thunk
 - delete with thunk
+
+
+- resolve
