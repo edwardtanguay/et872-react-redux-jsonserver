@@ -8,7 +8,7 @@ export const PageShoppingCart = () => {
 
 	return (
 		<>
-			<p className="mb-3">There are {cartItems.length} in your cart.</p>
+			<p className="mb-3">There are {cartItems.length} items in your cart.</p>
 			<section className="flex flex-col gap-1">
 				{cartItems.map((cartItem) => {
 					return (

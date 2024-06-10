@@ -14,6 +14,21 @@ export const PageTechBooks = () => {
 					<p className="mb-3 text-xl">
 						There are {techBooks.length} tech books.
 					</p>
+					{cartItems.length > 0 && (
+						<p
+							className={` ${
+								cartItems.length > 0
+									? "text-yellow-300 font-semibold bg-gray-700 w-fit px-2 py-1 rounded mb-3"
+									: "text-gray-400 italic"
+							}`}
+						>
+							There are {cartItems.length} items in your{" "}
+							<NavLink to="/shoppingcart" className="underline">
+								cart
+							</NavLink>{" "}
+							at the moment.
+						</p>
+					)}
 
 					<section className="flex flex-wrap gap-3">
 						{techBooks.map((techBook) => {
@@ -25,18 +40,6 @@ export const PageTechBooks = () => {
 							);
 						})}
 					</section>
-					<p
-						className={
-							cartItems.length > 0
-								? "text-yellow-300 font-semibold bg-gray-700 w-fit px-2 py-1 rounded"
-								: "text-gray-400 italic"
-						}
-					>
-						There are {cartItems.length} items in your {' '}
-						<NavLink to="/shoppingcart" className="underline">
-							cart
-						</NavLink> at the moment.
-					</p>
 				</>
 			) : (
 				<div>Loading...</div>
