@@ -13,6 +13,7 @@ import { AppProvider } from "./AppContext.tsx";
 import { PageTechBooks } from "./common/pages/PageTechBooks.tsx";
 import { store } from "./app/store.ts";
 import { Provider } from "react-redux";
+import { PageShoppingCart } from "./common/pages/PageShoppingCart.tsx";
 
 const children = [
 	{
@@ -22,6 +23,10 @@ const children = [
 	{
 		path: "techbooks",
 		element: <PageTechBooks />,
+	},
+	{
+		path: "shoppingcart",
+		element: <PageShoppingCart />,
 	},
 	{
 		path: "about",
