@@ -8,8 +8,8 @@ interface IProps {
 
 export const SingleTechBook = ({ techBook }: IProps) => {
 	const dispatch = useDispatch();
-	const selectCart = (state: RootState) => state.cart;
-	const { cartItems } = useSelector(selectCart);
+	const cartSelector = (state: RootState) => state.cart;
+	const { cartItems } = useSelector(cartSelector);
 
 	const numberInCart = (techBook: TechBook): number => {
 		return cartItems.filter((m) => m.techBook.id === techBook.id).length;
