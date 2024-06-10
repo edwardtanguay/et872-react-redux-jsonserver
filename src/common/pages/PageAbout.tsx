@@ -6,6 +6,6 @@ export const PageAbout = () => {
 	const { rating } = useSelector(selectCart);
 
 	return (
-		<p>This site is currently rated {rating} of 10.</p>
+		<p>This site is currently rated {rating} of 10 points.</p>
 	)
 }
