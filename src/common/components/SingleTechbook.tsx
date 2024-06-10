@@ -48,7 +48,7 @@ export const SingleTechBook = ({ techBook, view = "full" }: IProps) => {
 				</div>
 			)}
 			{view === "cart" && (
-				<div className="bg-slate-500 mb-2 p-3 rounded flex gap-3 items-center w-fit h-[4rem]">
+				<div className="bg-slate-500 mb-2 p-3 rounded flex gap-3 items-center w-[30rem] h-[4rem]">
 					<img
 						src={`images/techBooks/${techBook.idCode}.jpg`}
 						className="rounded w-[2rem] h-fit shadow-lg shadow-gray-600 cursor-pointer"
