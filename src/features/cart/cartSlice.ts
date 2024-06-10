@@ -56,7 +56,8 @@ export const cartSlice = createSlice({
 			state.cartItems.push(action.payload);
 		},
 		deleteTechBook: (state, action: PayloadAction<TechBook>) => {
-			console.log(333, 'deleting book');
+			console.log(333, 'deleting book: ' + action.payload.id);
+			state.techBooks = state.techBooks.filter(m => m.id !== action.payload.id);
 			// deleteTechBook(action.payload);
 		}
 	},
