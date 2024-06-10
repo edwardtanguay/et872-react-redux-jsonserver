@@ -12,6 +12,11 @@ export const SingleTechBook = ({ techBook, view = "full" }: IProps) => {
 	const cartSelector = (state: RootState) => state.cart;
 	const { cartItems } = useSelector(cartSelector);
 
+	const handleDeleteTechBook = (techBook: TechBook) => {
+		// dispatch(deleteTechBook(techBook));
+		alert(`deleting ${techBook.id}`);
+	};
+
 	const numberInCart = (techBook: TechBook): number => {
 		return cartItems.filter((m) => m.techBook.id === techBook.id).length;
 	};
@@ -44,7 +49,12 @@ export const SingleTechBook = ({ techBook, view = "full" }: IProps) => {
 						>
 							{numberInCart(techBook)} in cart
 						</p>
-						<button className="danger" onClick={() => dispatch({ type: "cart/deleteTechBook", payload: techBook })}>admin delete</button>
+						<button
+							className="danger"
+							onClick={() => handleDeleteTechBook(techBook)}
+						>
+							admin delete
+						</button>
 					</section>
 				</div>
 			)}
