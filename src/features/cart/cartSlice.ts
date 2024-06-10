@@ -72,6 +72,7 @@ export const cartSlice = createSlice({
 			state.rating = state.rating > 10 ? 10 : state.rating;
 		},
 		addCartItem: (state, action: PayloadAction<CartItem>) => {
+			console.log(111, 'adding techBook');
 			state.cartItems.push(action.payload);
 		}
 	}
