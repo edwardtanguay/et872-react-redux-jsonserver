@@ -32,7 +32,7 @@ export const SingleTechBook = ({ techBook }: IProps) => {
 					{techBook.title}
 				</div>
 				<div className="italic">{techBook.description}</div>
-				<p className="text-sm text-yellow-400 font-semibold">
+				<p className={`text-sm ${numberInCart(techBook) > 0 ? 'text-yellow-400 font-semibold' : 'text-gray-400 italic'}`}>
 					{numberInCart(techBook)} in cart
 				</p>
 			</section>
