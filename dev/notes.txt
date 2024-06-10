@@ -1,4 +1,4 @@
-- .. load actual books from API with thunk
-- delete with thunk
-	- make admin page
-- make users slice
+- .. make users slice
+
+- resolve
+	- connect delete button to actually delete the tech book from the JSON file

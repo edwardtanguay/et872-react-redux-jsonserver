@@ -44,6 +44,7 @@ export const SingleTechBook = ({ techBook, view = "full" }: IProps) => {
 						>
 							{numberInCart(techBook)} in cart
 						</p>
+						<button className="danger" onClick={() => dispatch({ type: "cart/deleteTechBook", payload: { techBook } })}>delete</button>
 					</section>
 				</div>
 			)}

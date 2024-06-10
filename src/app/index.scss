@@ -9,6 +9,10 @@
 	button.symbols {
 		@apply bg-slate-300 px-2 pt-0 pb-1 rounded hover:bg-slate-200;
 	}
+
+	button.danger {
+		@apply bg-red-300 px-2 pt-1 mt-2 pb-1 rounded hover:bg-red-400;
+	}
 }
 
 a.active {
