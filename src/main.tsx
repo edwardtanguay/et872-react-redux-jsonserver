@@ -14,6 +14,7 @@ import { PageTechBooks } from "./common/pages/PageTechBooks.tsx";
 import { store } from "./app/store.ts";
 import { Provider } from "react-redux";
 import { PageShoppingCart } from "./common/pages/PageShoppingCart.tsx";
+import { PageUsers } from "./common/pages/PageUsers.tsx";
 
 const children = [
 	{
@@ -27,6 +28,10 @@ const children = [
 	{
 		path: "shoppingcart",
 		element: <PageShoppingCart />,
+	},
+	{
+		path: "users",
+		element: <PageUsers/>
 	},
 	{
 		path: "about",
