@@ -31,8 +31,6 @@ export const deleteTechBook = createAsyncThunk('cart/deleteTechBook', async (tec
 	}
 })
 
-
-
 const initialState:State = {
 	rating: 5,
 	cartItems: [],
