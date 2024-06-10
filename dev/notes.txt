@@ -1,6 +1,7 @@
 - .. make interactive
-	- .. create shopping cart
-	- enable to click and put in cart which shows on second page
+	- x create shopping cart
+	- .. enable to click and put in cart which shows on second page
+		- .. incorpoate in SingleTechBook component
 - load actual books from API with thunk
 - delete with thunk
 
