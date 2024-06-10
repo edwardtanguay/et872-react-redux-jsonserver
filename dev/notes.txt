@@ -2,8 +2,8 @@
 	- x create shopping cart
 	- .. enable to click and put in cart which shows on second page
 		- .. incorpoate in SingleTechBook component
-			- .. show books on cart page as they are
-			- make another view in Single component
+			- x show books on cart page as they are
+			- .. make another view in Single component
 - load actual books from API with thunk
 - delete with thunk
 

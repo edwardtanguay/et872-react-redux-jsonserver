@@ -8,11 +8,11 @@ export const PageShoppingCart = () => {
 
 	return (
 		<>
-			<p>There are {cartItems.length} in your cart.</p>
-			<section className="flex flex-wrap gap-3">
+			<p className="mb-3">There are {cartItems.length} in your cart.</p>
+			<section className="flex flex-col gap-1">
 				{cartItems.map((cartItem) => {
 					return (
-						<SingleTechBook techBook={cartItem.techBook} key={cartItem.techBook.id} />
+						<SingleTechBook techBook={cartItem.techBook} view="cart" key={cartItem.techBook.id} />
 					);
 				})}
 			</section>
