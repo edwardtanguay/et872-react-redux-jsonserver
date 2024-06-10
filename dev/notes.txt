@@ -1,5 +1,5 @@
-- .. branches with vscode
-- branches with git
+- x branches with vscode
+- .. branches with git
 - .. load actual books from API with thunk
 - delete with thunk
 	- make admin page
