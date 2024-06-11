@@ -1,6 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { TechBook } from "../../shared/types";
-import { RootState } from "../../app/store";
+import { RootState, useAppDispatch } from "../../app/store";
+import { deleteTechBook } from "../../features/cart/cartSlice";
 
 interface IProps {
 	techBook: TechBook;
@@ -8,13 +9,12 @@ interface IProps {
 }
 
 export const SingleTechBook = ({ techBook, view = "full" }: IProps) => {
-	const dispatch = useDispatch();
+	const dispatch = useAppDispatch();
 	const cartSelector = (state: RootState) => state.cart;
 	const { cartItems } = useSelector(cartSelector);
 
 	const handleDeleteTechBook = (techBook: TechBook) => {
-		// dispatch(deleteTechBook(techBook));
-		alert(`deleting ${techBook.id}`);
+		dispatch(deleteTechBook(techBook));
 	};
 
 	const numberInCart = (techBook: TechBook): number => {
