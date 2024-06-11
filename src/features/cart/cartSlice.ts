@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {
+	createAction,
+	createAsyncThunk,
+	createSlice,
+	PayloadAction,
+} from "@reduxjs/toolkit";
 import { TechBook } from "../../shared/types";
 import axios from "axios";
 
@@ -36,18 +41,21 @@ const initialState: State = {
 	status: "loading",
 };
 
+export const subtract = createAction("cart/subtract");
+export const add = createAction("cart/add");
+
 export const cartSlice = createSlice({
 	name: "cart",
 	initialState,
 	reducers: {
-		subtract: (state) => {
-			state.rating--;
-			state.rating = state.rating < 0 ? 0 : state.rating;
-		},
-		add: (state) => {
-			state.rating++;
-			state.rating = state.rating > 10 ? 10 : state.rating;
-		},
+		// subtract: (state) => {
+		// 	state.rating--;
+		// 	state.rating = state.rating < 0 ? 0 : state.rating;
+		// },
+		// add: (state) => {
+		// 	state.rating++;
+		// 	state.rating = state.rating > 10 ? 10 : state.rating;
+		// },
 		addCartItem: (state, action: PayloadAction<CartItem>) => {
 			state.cartItems.push(action.payload);
 		},
@@ -61,6 +69,14 @@ export const cartSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder
+			.addCase(subtract, (state) => {
+				state.rating--;
+				state.rating = state.rating < 0 ? 0 : state.rating;
+			})
+			.addCase(add, (state) => {
+				state.rating++;
+				state.rating = state.rating > 10 ? 10 : state.rating;
+			})
 			.addCase(getTechBooks.pending, (state) => {
 				state.status = "loading";
 			})
@@ -79,5 +95,6 @@ export const cartSlice = createSlice({
 	},
 });
 
-export const { subtract, add, addCartItem } = cartSlice.actions;
+// export const { subtract, add, addCartItem } = cartSlice.actions;
+export const { addCartItem } = cartSlice.actions;
 export default cartSlice.reducer;
