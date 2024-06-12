@@ -40,19 +40,6 @@
       "systemWhoCreated": "systemUnknown"
     },
     {
-      "id": 5,
-      "idCode": "linuxCommandLine",
-      "title": "The Linux Command Line",
-      "description": "This is going to be another of my entry points into Linux administration of my Hetzner and Digital Ocean Debian/Ubuntu cloud machines. This book has good reviews as the best introduction to Linux commands, very basic and structured.",
-      "notes": "",
-      "yearMonth": "2019-03",
-      "rank": "4.8",
-      "language": "",
-      "extras": "",
-      "systemWhenCreated": "2022-05-17 00:54:35",
-      "systemWhoCreated": "systemUnknown"
-    },
-    {
       "id": 6,
       "idCode": "programmationShellSousLinux",
       "title": "Programmation shell sous Unix/Linux",
